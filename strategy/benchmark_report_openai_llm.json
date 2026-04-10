@@ -1,0 +1,336 @@
+{
+  "metadata_path": "strategy/metadata.json",
+  "embedding_provider": "mock",
+  "embedding_backend": "mock embeddings fallback",
+  "llm_backend": "gpt-4o-mini",
+  "doc_inventory": [
+    {
+      "doc_id": "alzheimer",
+      "disease_name": "Bệnh Alzheimer",
+      "category": "Thần kinh",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/alzheimer.md",
+      "char_count": 24904
+    },
+    {
+      "doc_id": "an-khong-tieu",
+      "disease_name": "Ăn không tiêu",
+      "category": "Tiêu hóa - Gan mật",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/an-khong-tieu.md",
+      "char_count": 10636
+    },
+    {
+      "doc_id": "ap-xe-hau-mon",
+      "disease_name": "Áp xe hậu môn",
+      "category": "Tiêu hóa - Hậu môn trực tràng",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/ap-xe-hau-mon.md",
+      "char_count": 8115
+    },
+    {
+      "doc_id": "ap-xe-phoi",
+      "disease_name": "Áp xe phổi",
+      "category": "Hô hấp",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/ap-xe-phoi.md",
+      "char_count": 12956
+    },
+    {
+      "doc_id": "ban-chan-dai-thao-duong",
+      "disease_name": "Bàn chân đái tháo đường",
+      "category": "Nội tiết - Đái tháo đường",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/ban-chan-dai-thao-duong.md",
+      "char_count": 11761
+    },
+    {
+      "doc_id": "bang-huyet-sau-sinh",
+      "disease_name": "Băng huyết sau sinh",
+      "category": "Sản phụ khoa",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/bang-huyet-sau-sinh.md",
+      "char_count": 11496
+    },
+    {
+      "doc_id": "bang-quang-tang-hoat",
+      "disease_name": "Bàng quang tăng hoạt",
+      "category": "Tiết niệu",
+      "source": "BV Tâm Anh",
+      "source_file": "C:/Users/ADMIN/Downloads/AI.20K - Cohort 1/Day07/Day-07-Lab-Data-Foundations/data/yte_md/bang-quang-tang-hoat.md",
+      "char_count": 9792
+    }
+  ],
+  "baseline": {
+    "alzheimer": {
+      "fixed_size": {
+        "count": 56,
+        "avg_length": 493.82
+      },
+      "by_sentences": {
+        "count": 33,
+        "avg_length": 752.97
+      },
+      "recursive": {
+        "count": 82,
+        "avg_length": 301.73
+      }
+    },
+    "ap-xe-phoi": {
+      "fixed_size": {
+        "count": 29,
+        "avg_length": 495.03
+      },
+      "by_sentences": {
+        "count": 13,
+        "avg_length": 994.62
+      },
+      "recursive": {
+        "count": 43,
+        "avg_length": 299.37
+      }
+    },
+    "bang-quang-tang-hoat": {
+      "fixed_size": {
+        "count": 22,
+        "avg_length": 492.82
+      },
+      "by_sentences": {
+        "count": 9,
+        "avg_length": 1086.56
+      },
+      "recursive": {
+        "count": 31,
+        "avg_length": 313.94
+      }
+    }
+  },
+  "benchmark_queries": [
+    {
+      "id": 1,
+      "query": "Bệnh Alzheimer được chẩn đoán chia giai đoạn theo thang điểm MMSE như thế nào?",
+      "gold_answer": "Alzheimer nhẹ: MMSE 21-26, trung bình: 10-20, trung bình nặng: 10-14, nặng: dưới 10.",
+      "gold_doc_id": "alzheimer",
+      "metadata_filter": {
+        "category": "Thần kinh"
+      }
+    },
+    {
+      "id": 2,
+      "query": "Các biện pháp cận lâm sàng nào giúp đánh giá tình trạng mạch máu và tưới máu bàn chân ở người bệnh đái tháo đường?",
+      "gold_answer": "Sử dụng các biện pháp đo chỉ số ABI (Ankle Brachial Index) và đo TcPO2 (transcutaneous oxygen tension).",
+      "gold_doc_id": "ban-chan-dai-thao-duong",
+      "metadata_filter": {
+        "category": "Nội tiết - Đái tháo đường"
+      }
+    },
+    {
+      "id": 3,
+      "query": "Kháng sinh điều trị cho bệnh nhân bị khối áp xe phổi nguyên phát thường phải kéo dài trong khoảng thời gian bao lâu?",
+      "gold_answer": "Thời gian dùng kháng sinh kéo dài từ 4 đến 6 tuần hoặc cho đến khi X-quang ngực sạch hoặc chỉ còn vết sẹo nhỏ.",
+      "gold_doc_id": "ap-xe-phoi",
+      "metadata_filter": {
+        "category": "Hô hấp"
+      }
+    },
+    {
+      "id": 4,
+      "query": "Nguyên nhân hàng đầu (chiếm tỷ lệ cao nhất) gây ra rủi ro băng huyết sau sinh là gì?",
+      "gold_answer": "Nguyên nhân hàng đầu gây ra là do tử cung co hồi kém (đờ tử cung).",
+      "gold_doc_id": "bang-huyet-sau-sinh",
+      "metadata_filter": {
+        "category": "Sản phụ khoa"
+      }
+    },
+    {
+      "id": 5,
+      "query": "Tôi thường xuyên bị ăn không tiêu kéo dài, đó có thể là dấu hiệu cảnh báo của những bệnh lý tiêu hóa nguy hiểm nào?",
+      "gold_answer": "Viêm loét dạ dày, trào ngược dạ dày thực quản, liệt dạ dày, thoát vị hoành, sỏi mật, viêm tụy, hội chứng ruột kích thích, hoặc ung thư dạ dày.",
+      "gold_doc_id": "an-khong-tieu",
+      "metadata_filter": {
+        "category": "Tiêu hóa - Gan mật"
+      }
+    }
+  ],
+  "retrieval_summary": {
+    "fixed_size": {
+      "chunk_count": 202,
+      "avg_chunk_length": 491.69,
+      "relevant_top3": 5
+    },
+    "sentence_chunker": {
+      "chunk_count": 170,
+      "avg_chunk_length": 525.97,
+      "relevant_top3": 5
+    },
+    "recursive": {
+      "chunk_count": 295,
+      "avg_chunk_length": 301.97,
+      "relevant_top3": 5
+    }
+  },
+  "sentence_rows": [
+    {
+      "id": 1,
+      "query": "Bệnh Alzheimer được chẩn đoán chia giai đoạn theo thang điểm MMSE như thế nào?",
+      "gold_doc_id": "alzheimer",
+      "metadata_filter": {
+        "category": "Thần kinh"
+      },
+      "top_doc_ids": [
+        "alzheimer",
+        "alzheimer",
+        "alzheimer"
+      ],
+      "relevant_top3": true,
+      "top1_score": 0.2764,
+      "top1_doc_id": "alzheimer",
+      "top1_chunk_summary": "Thông thường rất khó để phân biệt giữa các triệu chứng ở giai đoạn đầu và chứng hay quên bình thường do lão hóa. Không có khoảng cách giới h..."
+    },
+    {
+      "id": 2,
+      "query": "Các biện pháp cận lâm sàng nào giúp đánh giá tình trạng mạch máu và tưới máu bàn chân ở người bệnh đái tháo đường?",
+      "gold_doc_id": "ban-chan-dai-thao-duong",
+      "metadata_filter": {
+        "category": "Nội tiết - Đái tháo đường"
+      },
+      "top_doc_ids": [
+        "ban-chan-dai-thao-duong",
+        "ban-chan-dai-thao-duong",
+        "ban-chan-dai-thao-duong"
+      ],
+      "relevant_top3": true,
+      "top1_score": 0.242,
+      "top1_doc_id": "ban-chan-dai-thao-duong",
+      "top1_chunk_summary": "Các yếu tố như: biến chứng mạch máu, tình trạng giảm tưới máu, tổn thương thần kinh với các rối loạn cảm giác cũng là yếu tố làm người bệnh..."
+    },
+    {
+      "id": 3,
+      "query": "Kháng sinh điều trị cho bệnh nhân bị khối áp xe phổi nguyên phát thường phải kéo dài trong khoảng thời gian bao lâu?",
+      "gold_doc_id": "ap-xe-phoi",
+      "metadata_filter": {
+        "category": "Hô hấp"
+      },
+      "top_doc_ids": [
+        "ap-xe-phoi",
+        "ap-xe-phoi",
+        "ap-xe-phoi"
+      ],
+      "relevant_top3": true,
+      "top1_score": 0.1061,
+      "top1_doc_id": "ap-xe-phoi",
+      "top1_chunk_summary": "Màng phổi và màng tim xuất hiện dịch mủ do vỡ ổ áp xe; Nhiễm trùng huyết; Áp xe não, viêm màng não; Ho ra máu nặng; Suy kiệt, thoái hóa các ..."
+    },
+    {
+      "id": 4,
+      "query": "Nguyên nhân hàng đầu (chiếm tỷ lệ cao nhất) gây ra rủi ro băng huyết sau sinh là gì?",
+      "gold_doc_id": "bang-huyet-sau-sinh",
+      "metadata_filter": {
+        "category": "Sản phụ khoa"
+      },
+      "top_doc_ids": [
+        "bang-huyet-sau-sinh",
+        "bang-huyet-sau-sinh",
+        "bang-huyet-sau-sinh"
+      ],
+      "relevant_top3": true,
+      "top1_score": 0.2497,
+      "top1_doc_id": "bang-huyet-sau-sinh",
+      "top1_chunk_summary": "*Xử trí* Xoa bóp tử cung và thuốc tăng co bóp để kích thích tử cung co thắt; Sử dụng thuốc co hồi tử cung bao gồm oxytocin, methylergonovine..."
+    },
+    {
+      "id": 5,
+      "query": "Tôi thường xuyên bị ăn không tiêu kéo dài, đó có thể là dấu hiệu cảnh báo của những bệnh lý tiêu hóa nguy hiểm nào?",
+      "gold_doc_id": "an-khong-tieu",
+      "metadata_filter": {
+        "category": "Tiêu hóa - Gan mật"
+      },
+      "top_doc_ids": [
+        "an-khong-tieu",
+        "an-khong-tieu",
+        "an-khong-tieu"
+      ],
+      "relevant_top3": true,
+      "top1_score": 0.2386,
+      "top1_doc_id": "an-khong-tieu",
+      "top1_chunk_summary": "Ăn chậm nhai kỹ là một cách hữu ích để phòng ngừa chứng khó tiêu ## **Các thắc mắc hay gặp khi ăn không tiêu** Dưới đây là gia..."
+    }
+  ],
+  "agent_qa_rows": [
+    {
+      "id": 1,
+      "query": "Bệnh Alzheimer được chẩn đoán chia giai đoạn theo thang điểm MMSE như thế nào?",
+      "gold_answer": "Alzheimer nhẹ: MMSE 21-26, trung bình: 10-20, trung bình nặng: 10-14, nặng: dưới 10.",
+      "metadata_filter": {
+        "category": "Thần kinh"
+      },
+      "top_doc_ids": [
+        "alzheimer",
+        "alzheimer",
+        "alzheimer"
+      ],
+      "top1_chunk_summary": "Thông thường rất khó để phân biệt giữa các triệu chứng ở giai đoạn đầu và chứng hay quên bình thường do lão hóa. Không có khoảng cách giới h...",
+      "agent_answer": "Tôi không có đủ thông tin để trả lời câu hỏi về cách chẩn đoán bệnh Alzheimer theo thang điểm MMSE."
+    },
+    {
+      "id": 2,
+      "query": "Các biện pháp cận lâm sàng nào giúp đánh giá tình trạng mạch máu và tưới máu bàn chân ở người bệnh đái tháo đường?",
+      "gold_answer": "Sử dụng các biện pháp đo chỉ số ABI (Ankle Brachial Index) và đo TcPO2 (transcutaneous oxygen tension).",
+      "metadata_filter": {
+        "category": "Nội tiết - Đái tháo đường"
+      },
+      "top_doc_ids": [
+        "ban-chan-dai-thao-duong",
+        "ban-chan-dai-thao-duong",
+        "ban-chan-dai-thao-duong"
+      ],
+      "top1_chunk_summary": "Các yếu tố như: biến chứng mạch máu, tình trạng giảm tưới máu, tổn thương thần kinh với các rối loạn cảm giác cũng là yếu tố làm người bệnh...",
+      "agent_answer": "Tôi không có đủ thông tin."
+    },
+    {
+      "id": 3,
+      "query": "Kháng sinh điều trị cho bệnh nhân bị khối áp xe phổi nguyên phát thường phải kéo dài trong khoảng thời gian bao lâu?",
+      "gold_answer": "Thời gian dùng kháng sinh kéo dài từ 4 đến 6 tuần hoặc cho đến khi X-quang ngực sạch hoặc chỉ còn vết sẹo nhỏ.",
+      "metadata_filter": {
+        "category": "Hô hấp"
+      },
+      "top_doc_ids": [
+        "ap-xe-phoi",
+        "ap-xe-phoi",
+        "ap-xe-phoi"
+      ],
+      "top1_chunk_summary": "Màng phổi và màng tim xuất hiện dịch mủ do vỡ ổ áp xe; Nhiễm trùng huyết; Áp xe não, viêm màng não; Ho ra máu nặng; Suy kiệt, thoái hóa các ...",
+      "agent_answer": "Không có đủ thông tin để trả lời câu hỏi này."
+    },
+    {
+      "id": 4,
+      "query": "Nguyên nhân hàng đầu (chiếm tỷ lệ cao nhất) gây ra rủi ro băng huyết sau sinh là gì?",
+      "gold_answer": "Nguyên nhân hàng đầu gây ra là do tử cung co hồi kém (đờ tử cung).",
+      "metadata_filter": {
+        "category": "Sản phụ khoa"
+      },
+      "top_doc_ids": [
+        "bang-huyet-sau-sinh",
+        "bang-huyet-sau-sinh",
+        "bang-huyet-sau-sinh"
+      ],
+      "top1_chunk_summary": "*Xử trí* Xoa bóp tử cung và thuốc tăng co bóp để kích thích tử cung co thắt; Sử dụng thuốc co hồi tử cung bao gồm oxytocin, methylergonovine...",
+      "agent_answer": "Nguyên nhân hàng đầu gây ra rủi ro băng huyết sau sinh là bất thường của bánh nhau, bao gồm nhau bám thấp, nhau cài răng lược và nhau tiền đạo."
+    },
+    {
+      "id": 5,
+      "query": "Tôi thường xuyên bị ăn không tiêu kéo dài, đó có thể là dấu hiệu cảnh báo của những bệnh lý tiêu hóa nguy hiểm nào?",
+      "gold_answer": "Viêm loét dạ dày, trào ngược dạ dày thực quản, liệt dạ dày, thoát vị hoành, sỏi mật, viêm tụy, hội chứng ruột kích thích, hoặc ung thư dạ dày.",
+      "metadata_filter": {
+        "category": "Tiêu hóa - Gan mật"
+      },
+      "top_doc_ids": [
+        "an-khong-tieu",
+        "an-khong-tieu",
+        "an-khong-tieu"
+      ],
+      "top1_chunk_summary": "Ăn chậm nhai kỹ là một cách hữu ích để phòng ngừa chứng khó tiêu ## **Các thắc mắc hay gặp khi ăn không tiêu** Dưới đây là gia...",
+      "agent_answer": "Bạn có thể đang gặp phải các bệnh lý tiêu hóa như bệnh trào ngược dạ dày thực quản, viêm dạ dày, liệt dạ dày (Gastroparesis) hoặc thoát vị hoành."
+    }
+  ]
+}

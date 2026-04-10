@@ -1,0 +1,37 @@
+{
+    "alzheimer": {
+        "disease_name": "Bệnh Alzheimer",
+        "category": "Thần kinh",
+        "source": "BV Tâm Anh"
+    },
+    "an-khong-tieu": {
+        "disease_name": "Ăn không tiêu",
+        "category": "Tiêu hóa - Gan mật",
+        "source": "BV Tâm Anh"
+    },
+    "ap-xe-hau-mon": {
+        "disease_name": "Áp xe hậu môn",
+        "category": "Tiêu hóa - Hậu môn trực tràng",
+        "source": "BV Tâm Anh"
+    },
+    "ap-xe-phoi": {
+        "disease_name": "Áp xe phổi",
+        "category": "Hô hấp",
+        "source": "BV Tâm Anh"
+    },
+    "ban-chan-dai-thao-duong": {
+        "disease_name": "Bàn chân đái tháo đường",
+        "category": "Nội tiết - Đái tháo đường",
+        "source": "BV Tâm Anh"
+    },
+    "bang-huyet-sau-sinh": {
+        "disease_name": "Băng huyết sau sinh",
+        "category": "Sản phụ khoa",
+        "source": "BV Tâm Anh"
+    },
+    "bang-quang-tang-hoat": {
+        "disease_name": "Bàng quang tăng hoạt",
+        "category": "Tiết niệu",
+        "source": "BV Tâm Anh"
+    }
+}
