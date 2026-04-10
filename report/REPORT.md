@@ -230,11 +230,11 @@ Toi se tach section heading ro hon trong preprocessing (chan doan, nguyen nhan, 
 | Tieu chi | Loai | Diem tu danh gia |
 |----------|------|-------------------|
 | Warm-up | Ca nhan | 5 / 5 |
-| Document selection | Nhom | 10 / 10 |
+| Document selection | Nhom | 9 / 10 |
 | Chunking strategy | Nhom | 15 / 15 |
-| My approach | Ca nhan | 10 / 10 |
-| Similarity predictions | Ca nhan | 5 / 5 |
-| Results | Ca nhan | 10 / 10 |
+| My approach | Ca nhan | 9 / 10 |
+| Similarity predictions | Ca nhan | 4 / 5 |
+| Results | Ca nhan | 9 / 10 |
 | Core implementation (tests) | Ca nhan | 30 / 30 |
 | Demo | Nhom | 5 / 5 |
-| **Tong** | | **100 / 100** |
+| **Tong** | | **86 / 100** |
