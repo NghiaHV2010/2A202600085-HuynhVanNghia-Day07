@@ -1,3 +1,4 @@
+```
 METADATA FILTER EVALUATION: search() vs search_with_filter()
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -102,3 +103,4 @@ METADATA FILTER EVALUATION: search() vs search_with_filter()
   Avg precision (with filter):     100.0%
   Precision improvement:           +90.5%
 Đang hiển thị 712548391865381266.
+```
